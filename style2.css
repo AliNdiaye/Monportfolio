@@ -1,0 +1,441 @@
+body {
+    background-color:#f7f7f7;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    /*  */
+}
+
+
+/*  Debut  bar navigateur */
+.menu-bar {
+    background-color: #FF6600;
+    overflow: hidden;
+}
+
+.menu-bar ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.menu-bar li {
+    margin: 0;  /* Supprime les marges */
+}
+
+.menu-bar a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 20px;
+    text-decoration: none;
+   font-size: larger;
+   
+}
+
+.menu-bar a:hover {
+    background-color: #575757;
+}
+/* END NAVNAR */
+/* TITRE PORTFOLIO  */
+span{
+    color:#FF6600;
+}
+.photoprofil{
+    width:40%;
+    height: 100%;
+    position:absolute;
+    bottom: 0;
+    right:20vh;
+}
+.photoprofil img{
+    height: 80%;
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%);
+    transition:bottom 1s, left 1s;
+}
+.Acceuil{
+    position: relative;
+    top: 35vh;
+    text-align: center;
+    right: 50vh;
+    font-size: 25px;
+}
+.Acceuil a{
+    background: #212121;
+    padding: 10px 18px;
+    text-decoration: none;
+    font-weight: bold;
+    color: #fff;
+    display: inline-block;
+    margin: 30px 0;
+    border-radius: 50px;
+    position: relative;
+    bottom:5vh;
+}
+
+/* les icones du Profil */
+.iconprofil {
+    position: relative;
+    color: #FF6600; 
+    font-size: 30px;
+    top: 30vh;
+    text-align: center;
+    right: 50vh;
+
+
+}
+
+/* les icones du Profil */
+
+/* -------START A PROPOS ------ */
+.about{
+    display: flex;
+    font-family: Arial, sans-serif;
+    border: 3px solid#FF6600;
+    border-radius: 80px 0px 80px 0px;
+    width: 85%;
+    position: relative;
+    top: 20vh;
+    left: 20vh;
+    height: 80vh;
+    background-color: #fff;
+}
+.about img{
+    width: 65vh;
+    border-radius: 50px 0px 50px 0px;
+}
+.about p{
+    position: relative;
+    left:30px;
+    font-size: 22px;
+}
+.propos{
+    text-align: center;
+    position: relative;
+    top: 20vh;
+    font-size: 50px;
+}
+/* css fin */
+
+/* --- START PROJET */
+
+.expres-container{
+    position: relative;
+    left: 100px;
+    width: 160vh;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin: 15px;
+    
+}
+.expres-container .expres-card {
+    position: relative;
+    height: 250px;
+    background: #fff;
+    display: flex;
+    width: 40%;
+    margin: 30px 0;
+
+}
+.expres-container .expres-card .imgBx{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background:#ebf5fc;
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    transition: 0.5s ease-in-out;
+    border-radius: 10%;
+    border: 3px solid#FF6600;
+}
+.expres-container .expres-card:hover .imgBx{
+    width: 120px;
+    height: 150px;
+    left:-75px;
+    top :calc(50%  - 75px);
+    transition: 0.5s ease-in-out;
+    background:#FF6600;
+}
+.expres-container .expres-card .imgBx:before{
+    content: attr(data-text);
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    font-size:6em;
+    color:rgba(255,255,255,.05);
+    font-weight:700;
+}
+
+.expres-container .expres-card .imgBx img{
+    max-width: 100px;
+    transition: 0.5s ease-in-out;
+}
+.expres-container .expres-card:hover .imgBx img{
+    max-width: 75px;sam
+}
+.expres-container .expres-card .expres-content{ 
+    position:absolute;
+    right: 0;
+    width: calc(100% - 75px);
+    height: 80%;
+    padding:20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.expres-container .expres-card .expres-content h3{
+    margin-bottom: 5px;
+    font-size:24px;
+}
+.expres-container .expres-card .expres-content a{
+    display: inline-block;
+    margin-top: 10px;
+    padding: 5px 10px;
+    background: #333;
+    text-decoration: none;
+    color: #fff;
+}
+@media(max-width:992px){
+    .expres-container{
+        width: 100%;
+        flex-direction:column ;
+        align-items: center;
+    }
+    .expres-container .expres-card{
+        width: 400px;
+    }
+}
+@media(max-width:768px){
+    .expres-container .expres-card{
+        max-width: 300px;
+        flex-direction:column;
+        height:auto;
+    }
+    .expres-container .expres-card .imgBx{
+        position: relative;
+    }
+    .expres-container .expres-card .imgBx,
+    .expres-container .expres-card:hover .imgBx{
+        width: 100%;
+        height:200px;
+        left: 0;
+    }
+    .expres-container .expres-card .imgBx img,
+    .expres-container .expres-card:hover .imgBx img {
+        max-width: 100px;
+    }
+    .expres-container .expres-card .expres-content {
+        position: relative;
+        width:100%;
+    }
+}
+
+
+
+/* --- END PROJET */
+
+
+/* ----   START COMPETENCES */
+.competence{
+    width: 80%;
+    padding: 35px 10%;
+    height: 80%;
+}
+   
+.competence{
+    padding-right: calc(100% - "30px");
+}
+
+main.row{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap:20px;
+}
+.col header.title{
+    font-family: helvetica;
+    color: #11a372;
+    padding: 0px 0px 20px 30px;
+
+}
+.col .certification{
+    padding: 0px 30px ;
+    border-left: 2px solid #bababa;
+}
+
+.col .certification .formt-box{
+    position: relative;
+    padding: 20px;
+    border: 1px solid #eaeaea;
+    background-color: #ffffff;
+    cursor: pointer;
+    transition: all 0.4s;
+    margin-bottom: 20px;
+}
+.col .certification .formt-box:hover{
+    box-shadow: 0px 3px 12px 0px #ccc;
+    border: 1px solid transparent;
+}
+.col .certification .formt-box::before{
+    content: "";
+    position: absolute;
+    width: 16px;
+    height: 16px;
+     border-radius: 50%;
+    right: calc(100% + 22px );
+    top: 0;
+    background-color:#FF6600;
+    border: 2px solid white;
+}
+
+.formt-box h4{
+    position: relative;
+    color:#FF6600;;
+}
+
+.formt-box h3{
+    font-size: 19px;
+    padding: 10px 0px 6px;
+    font-family: helvetica;
+    color: #444;
+}
+.formt-box p{
+    line-height: 1.2;
+    color: #666;
+    font-size: 17px;
+}
+@media(max-width: 768px){
+    main.row{
+        grid-template-columns: 1fr;
+    }
+    .row .col:nth-child(2){
+        margin-top: 30px;
+    }
+}
+/* ---  END COMPETENCES */
+
+/* START FORMULAIRE CSS  */
+
+.container {
+    position: relative;
+    left: 50vh;
+    background: white;
+    padding: 20px 40px;
+    border-radius: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px;
+}
+
+.form h2 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    color: #555;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-size: 16px;
+    color: #333;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    border-color: #3498db;
+    outline: none;
+}
+
+button {
+    width: 100%;
+    padding: 10px 15px;
+    background-color: #3498db;
+    border: none;
+    border-radius: 4px;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #2980b9;
+}
+
+/* END FORMULAIRE CSS  */
+
+/* --- START  FOOTER  */
+footer {
+    background: #333;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+}
+
+.footer-content {
+    max-width: 1000px;
+    margin: auto;
+    padding: 20px;
+}
+
+.footer-content h3 {
+    margin-bottom: 10px;
+}
+
+.footer-content p {
+    margin-bottom: 20px;
+    line-height: 1.6;
+}
+
+.socials {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.socials li {
+    display: inline;
+    margin: 0 10px;
+}
+
+.socials a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 20px;
+}
+
+.footer-bottom {
+    background: #222;
+    padding: 10px 0;
+    font-size: 14px;
+}
+
+.footer-bottom p {
+    margin: 0;
+}
+/* --- END  FOOTER  */
